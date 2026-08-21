@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books | Cloud Library</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-wrapper">
+<!-----Navigation----->
+    <header>
+        <nav class="navbar"
+            role="navigation"
+            aria-label="Main Navigation">
+
+        <div class="nav-brand"><img src="images/Logo with Cloud and Book.jpg" alt="Cloud image" width="50px">
+            Cloud Library</div>
+        <button class="nav-toggle" id="nav-toggle" aria-controls="nav-links" aria-expanded="false">
+            ☰
+          </button>
+           <ul class="nav-links" id="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="books.html" class="active">Books</a></li>
+              <li><a href="members.html">Members</a></li>
+              <li><a href="borrow.html">Borrow</a></li>
+              <li><a href="dashboard.html">Dashboard</a></li>
+           </ul>
+        </nav>
+    </header>
+<!-----Books Banner----->
+    <section class="books-banner">
+        <img src="images/Small cozy library interior for a webpage book banner.jpg" alt="Banner Image"
+        class="banner-img">
+        <div class="banner-overlay"></div>
+        <div class="books-banner-content">
+            <p class="banner-small">CLOUD LIBRARY COLLECTION</p>
+            <h1>Browse Library Books</h1>
+            <p>Search, filter and view available books in the Cloud Library Management System.</p>
+        </div>
+    </section>
+<!-----Search and Filter----->
+<section class="book-tools">
+    <div class="book-tools-container">
+        <div class="book-search-group">
+            <label for="bookPageSearch">Search Books</label>
+            <input type="text" id="bookPageSearch" placeholder="Search by title or author">
+        </div>
+    <div class="book-filter-group">
+        <label for="categoryFilter">Category</label>
+        <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="Technology">Technology</option>
+            <option value="Programming">Programming</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Non-Fiction">Non-fiction</option>
+            <option value="Cloud">Cloud</option>
+        </select>
+    </div>
+    <div class="book-filter-group">
+        <label for="statusFilter">Status</label>
+        <select id="statusFilter">
+            <option value="all">All Status</option>
+            <option value="Available">Available</option>
+            <option value="Borrowed">Borrowed</option>
+        </select>
+    </div>   
+    </div>
+</section>    
+<!-----Book Results----->
+<main class="books-section">
+    <div class="books-heading">
+        <div>
+        <h2>Book Collection</h2>
+        <p>Browse books currently stored in the library.</p>
+        </div>
+    <p id="bookCount">0 books found</p>
+    </div>
+    <!---JavaScript will create book cards inside this-->
+    <div class="books-grid" id="booksGrid"></div>
+    <!--Message appears when no book matches the filters-->
+    <p class="no-books-message" id="noBooksMessage">
+        No books found.
+    </p>
+</main>
+<!--===Footer===-->
+<footer>
+    <p>&copy;2026 Cloud Library Management System</p>
+    <p>Junior Cloud Engineer Portfolio Project</p>
+</footer>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>

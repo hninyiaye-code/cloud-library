@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Library Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-wrapper">
+    <header>
+  <!-----Navigation----->
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
+          <div class="nav-brand"><img src="images/Logo with Cloud and Book.jpg" alt="Cloud image" width="50px">
+            Cloud Library</div> <!--brand--> <!--put image-->
+
+          <button class="nav-toggle" id="nav-toggle" aria-controls="nav-links" aria-expanded="false">
+            ☰
+          </button>
+           <ul class="nav-links" id="nav-links">
+              <li><a href="#home" class="active">Home</a></li>
+              <li><a href="#books">Books</a></li>
+              <li><a href="#members">Members</a></li>
+              <li><a href="#borrow">Borrow</a></li>
+              <li><a href="#dashboard">Dashboard</a></li>
+           </ul>
+        </nav>
+    </header>
+  <!-----Hero section----->
+    <section class="hero" id="home">
+        <image src="images/Wide hero section background image for Cloud Library .jpg" alt="Hero Background" class="hero-img"/>
+        <!--hero image created using CanvaAI (Canva,2026)-->
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-small">
+                CLOUD-BASED LIBRARY SYSTEM
+            </p>
+
+            <h1>Welcome to Cloud Library</h1>
+             <p>Manage books,members,borrowing, and library activity through on simple cloud-based application.</p>
+             <a href="#books" class="cta">Explore Library</a>
+        </div>
+    </section>
+  <!-----Introduction----->
+    <section class="intro">
+        <h2>Library Management Made Simple</h2>
+        <p>Cloud Library Management System is a web application designed to help libraries organize books,members,
+            borrowing and returns efficiently.</p>
+
+         <p>This project demonstrates web development and will later integrate cloud technologies including
+            Amazon EC2,RDS,S3,CloudWatch and AWS Secrets Manager.</p>   
+    </section>
+  <!-----Feature Cards----->
+    <section class="features">
+        <h2 class="section-title">Library Features</h2>
+
+        <div class="card-container">
+
+          <!--Book card-->
+          <div class="card" id="books">
+            <!--image-->
+
+           <div class="card-content">
+            <h2>Books</h2>
+            <p>Browse,search,add,edit and manage books in the library.</p>
+            <button class="card-button" id="bookButton">View Books</button>
+           </div><!--book content close-->  
+          </div><!--book card close--> 
+
+          <!--Member Card-->
+          <div class="card" id="members">
+            <!--image-->
+
+            <div class="card-content">
+              <h2>Members</h2>
+              <p>Register and manage library members and their account information.</p>
+              <button class="card-button" id="memberButton">View Members</button>  
+
+            </div><!--members content close-->
+          </div><!--members card close-->
+
+          <!--Borrow Card-->
+          <div class="card" id="borrow">
+            <!--image-->
+
+            <div class="card-content">
+              <h2>Borrow&Return</h2>
+              <p>Keep track of borrowed books,due dates and returned books.</p>
+              <button class="card-button" id="borrowButton">Borrow Book</button>
+            </div>
+          </div>
+
+          <!--Dashboard card-->
+          <div class="card" id="dashboard">
+            <!--image-->
+            <div class="card-content">
+              <h2>Dashboard</h2>
+              <p>View important library statistics and current activity.</p>
+              <button class="card-button" id="dashboardButton">View Dashboard</button>
+            </div>
+          </div>
+        </div><!--card container close-->
+    </section><!--card feature section close-->
+
+    <!-----Search Book----->
+    <section class="search-section">
+      <div class="search-container">
+        <h2>Search Library Books</h2>
+        <p>Try searching for a book.</p>
+        <div class="search-box">
+          <input type="text" id="bookSearch" placeholder="Enter a book title">
+          <button id="searchButton">Search</button>
+        </div>
+        <p id="searchResult"></p>
+      </div><!--container close-->
+    </section>
+
+  <!-----Dashboard Statics-->
+  <section class="dashboard-section">
+    <h2 class="section-title">Library Dashboard</h2>
+      <div class="stats-container">
+        <div class="stat-card">
+          <h3>Total Books</h3>
+          <p class="stat-number">6</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Members</h3>
+          <p class="stat-number">3</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Books Borrowed</h3>
+          <p class="stat-number">2</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Available Books</h3>
+          <p class="stat-number">4</p>
+        </div>
+      </div><!--container close-->
+  </section><!--dashboard section close-->
+
+  <!--Cloud Architecture-->
+  <section class="cloud-section">
+    <h2>Cloud Architecture</h2>
+    <p>This application will eventually be deployed using AWS cloud services.</p>
+
+    <div class="cloud-services">
+      <div class="cloud-card">
+        <h3>Amazon EC2</h3>
+        <p>Application hosting</p>
+      </div>
+
+      <div class="cloud-card">
+        <h3>Amazon RDS</h3>
+        <p>MySQL database</p>
+      </div>
+
+      <div class="cloud-card">
+        <h3>Amazon S3</h3>
+        <p>Book image storage</p>
+      </div>
+
+      <div class="cloud-card">
+        <h3>CloudWatch</h3>
+        <p>Monitoring and logs</p>
+      </div>
+
+      <div class="cloud-card">
+        <h3>Secrets Manager</h3>
+        <p>Database credentials</p>
+      </div>
+    </div><!--cloud services close-->
+  </section><!--cloud section close-->
+
+  <!-----Footer----->
+  <footer>
+    <p>&copy;2026 Cloud Library Management System</p>
+    <p>Junior Cloud Engineer Portfolio Project</p>
+  </footer>
+</div> <!--page wrapper close-->
+
+<script src="js/script.js"></script>
+</body>
+</html>

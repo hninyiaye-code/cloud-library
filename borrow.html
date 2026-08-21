@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrow Books | Cloud Library</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-wrapper">
+<!-----Navigation----->
+    <header>
+        <nav class="navbar"
+            role="navigation"
+            aria-label="Main Navigation">
+
+        <div class="nav-brand"><img src="images/Logo with Cloud and Book.jpg" alt="Cloud image" width="50px">
+            Cloud Library</div>
+        <button class="nav-toggle" id="nav-toggle" aria-controls="nav-links" aria-expanded="false">
+            ☰
+          </button>
+           <ul class="nav-links" id="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="books.html">Books</a></li>
+              <li><a href="members.html">Members</a></li>
+              <li><a href="borrow.html" class="active">Borrow</a></li>
+              <li><a href="dashboard.html">Dashboard</a></li>
+           </ul>
+        </nav>
+    </header>
+
+    <!--======BORROW PAGE BANNER=====-->
+    <section class="borrow-banner">
+        <div class="borrow-banner-overlay"></div>
+        <div class="borrow-banner-content">
+        <h1>Borrow a Book</h1>
+        <p>Select a library member and an available book.</p>
+        </div>
+    </section>
+
+    <!--===Borrow Form===-->
+    <main class="borrow-section">
+        <div class="borrow-container">
+            <h2>Borrow Book Form</h2>
+
+            <p>Complete the form below.</p>
+
+            <form id="borrowForm">
+
+                <!--Select Member-->
+
+                <label for="borrowMember">
+                    Select Member
+                </label>
+
+                <select id="borrowMember" required>
+                    <option value="">Choose a member</option>
+                    <option value="Emily Johnson">Emily Johnson</option>
+                    <option value="Michael Smith">Michael Smith</option>
+                    <option value="Sarah Brown">Sarah Brown</option>
+                </select>
+
+                <!--Select Book-->
+                <label for="borrowBook">
+                    Select Book
+                </label>
+                <select id="borrowBook" required>
+                    <option value="">Choose a book</option>
+                    <option value="Cloud Computing Basics">Cloud Computing Basics</option>
+                    <option value="Learning JavaScript">Learning JavaScript</option>
+                    <option value="HTML and CSS Design">HTML and CSS Design</option>
+                    <option value="AWS for Solutions Architect">AWS for Solutions Architects</option>
+                    <option value="Educated">Educated</option>
+                    <option value="Atomic Habits">Atomic Habits</option>
+                </select>
+
+                <!--Borrow Button-->
+                <button
+                    type="submit" class="borrow-submit-button">
+                    Borrow Book
+                </button>
+            </form>
+
+            <!--JavaScript message appears here-->
+            <p id="borrowMessage"></p>
+        </div>
+    </main>
+
+    <!--Simple Borrow Information-->
+    <section class="borrow-info-section">
+        <h2>
+            Borrowing Information
+        </h2>
+
+        <div class="borrow-info-cards">
+            <div class="borrow-info-card">
+                <h3>Select Book</h3>
+                <p>Choose an available book from the library.</p>
+            </div>
+
+            <div class="borrow-info-card">
+                <h3>Select Member</h3>
+                <p>Choose the member who is borrowing the book.</p>
+            </div>
+
+            <div class="borrow-info-card">
+                <h3>Borrow</h3>
+                <p>Submit the form to record the borrowed book.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!--===Footer===-->
+    <footer>
+        <p>&copy;2026 Cloud Library Management System</p>
+        <p>Junior Cloud Engineer Portfolio Project</p>
+    </footer>
+</div>
+
+<script src="js/script.js"></script>

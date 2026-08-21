@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Cloud Library</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-wrapper">
+<!-----Navigation----->
+    <header>
+        <nav class="navbar"
+            role="navigation"
+            aria-label="Main Navigation">
+
+        <div class="nav-brand"><img src="images/Logo with Cloud and Book.jpg" alt="Cloud image" width="50px">
+            Cloud Library</div>
+        <button class="nav-toggle" id="nav-toggle" aria-controls="nav-links" aria-expanded="false">
+            ☰
+          </button>
+           <ul class="nav-links" id="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="books.html">Books</a></li>
+              <li><a href="members.html">Members</a></li>
+              <li><a href="borrow.html">Borrow</a></li>
+              <li><a href="dashboard.html" class="active">Dashboard</a></li>
+           </ul>
+        </nav>
+    </header>
+
+    <!--=====DASHBOARD BANNER=====-->
+    <section class="dashboard-banner">
+        <div class="dashboard-banner-overlay"></div>
+        <div class="dashboard-banner-content">
+        <h1>Library Dashboard</h1>
+        <p>View a simple summary of Cloud Library activity.</p>
+        </div>
+    </section>
+
+    <!--=====DASHBOARD STATISTICS=====-->
+    <main class="dashboard-page">
+        <h2>Library Overview</h2>
+
+        <p class="dashboard-description">
+            Current books and member information.</p>
+
+        <div class="dashboard-grid">
+            <!--Total Books-->
+            <div class="dashboard-card">
+                <div class="dashboard-icon"></div>
+                <h3>Total Books</h3>
+                <p class="dashboard-number" id="totalBooks">
+                    0
+                </p>
+            </div>
+            <!--Total Members-->
+            <div class="dashboard-card">
+                <div class="dashboard-icon"></div>
+                <h3>Total Members</h3>
+                <p class="dashboard-number" id="totalMembers">
+                    0
+                </p>
+            </div>
+            <!--Borrow Books-->
+            <div class="dashboard-card">
+                <div class="dashboard-icon"></div>
+                <h3>Borrowed Books</h3>
+                <p class="dashboard-number" id="borrowedBooks">
+                    0
+                </p>
+            </div>
+            <!--Available Books-->
+            <div class="dashboard-card">
+                <div class="dashboard-icon"></div>
+                <h3>Available Books</h3>
+                <p class="dashboard-number" id="availableBooks">
+                    0
+                </p>
+            </div>
+        </div>
+
+    </main>
+    <!--=====Simple Management Links=====-->
+    <section class="dashboard-actions">
+        <h2>Library Management</h2>
+
+        <div class="dashboard-action-grid">
+            <a href="books.html" class="dashboard-action-card">
+
+                <h3>Manage Books</h3>
+                <p>View and search library books.</p>
+            </a>
+
+            <a href="members.html" class="dashboard-action-card">
+
+                <h3>Manage Members</h3>
+                <p>View and search library members.</p>
+            </a>
+
+            <a href="borrow.html" class="dashboard-action-card">
+
+                <h3>Borrow Book</h3>
+                <p>Record a book borrowing.</p>
+            </a>
+        </div>
+    </section>
+
+    <!--===Footer===-->
+<footer>
+    <p>&copy;2026 Cloud Library Management System</p>
+    <p>Junior Cloud Engineer Portfolio Project</p>
+</footer>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>

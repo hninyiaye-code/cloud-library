@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members | Cloud Library</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-wrapper">
+<!-----Navigation----->
+    <header>
+        <nav class="navbar"
+            role="navigation"
+            aria-label="Main Navigation">
+
+        <div class="nav-brand"><img src="images/Logo with Cloud and Book.jpg" alt="Cloud image" width="50px">
+            Cloud Library</div>
+        <button class="nav-toggle" id="nav-toggle" aria-controls="nav-links" aria-expanded="false">
+            ☰
+          </button>
+           <ul class="nav-links" id="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="books.html">Books</a></li>
+              <li><a href="members.html" class="active">Members</a></li>
+              <li><a href="borrow.html">Borrow</a></li>
+              <li><a href="dashboard.html">Dashboard</a></li>
+           </ul>
+        </nav>
+    </header>
+
+    <!--=====MEMBER BANNER=====-->
+    <section class="members-banner">
+        <img src="images/members banner.jpg" alt="Member Banner Image"
+        class="members-banner-img">
+    </section>
+
+    <!--=====MEMBER SEARCH=====-->
+    <section class="member-search-section">
+        <div class="member-search-container">
+            <label for="memberSearch">Search Members</label>
+
+            <input type="text" id="memberSearch" placeholder="Search by name or email">
+        </div>
+    </section>
+
+    <!--=====MEMBER LIST=====-->
+    <main class="members-section">
+        <div class="members-heading">
+            <div>
+                <h2>Member list</h2>
+                <p>Registered Cloud Library members</p>
+            </div>
+
+            <!--JavaScript changes this number-->
+            <p id="memberCount">
+                0 members
+            </p>
+        </div>
+
+        <!--JavaScript creates member cards here-->
+        <div class="members-grid" id="membersGrid">
+
+        </div>
+
+        <!--Hidden until no members are found-->
+        <p id="noMembersMessage" class="no-members-message">
+            No members found.
+        </p>
+
+    </main>
+
+    <!--=====Add Member Form=====-->
+    
+    <section class="add-member-section">
+        <div class="add-member-container">
+            <h2>Add New Member</h2>
+
+            <p>Enter the member information below.</p>
+
+            <form id="memberForm">
+
+                <!--Member Name-->
+                <label for="memberName">Full Name</label>
+                <input type="text" id="memberName" placeholder = "Enter full name" required>
+
+                <!--Member Email-->
+                <label for="memberEmail">Email</label>
+                <input type="email" id="memberEmail" placeholder = "Enter email address" required>
+
+                <!--Add Member Button-->
+                <button type="submit" class="add-member-button">
+                    Add Member
+                </button>
+            </form>
+
+            <!--JavaScript message-->
+                <p id="memberMessage"></p>   
+        </div>
+    </section>
+    <!--===Footer===-->
+    <footer>
+        <p>&copy;2026 Cloud Library Management System</p>
+        <p>Junior Cloud Engineer Portfolio Project</p>
+    </footer>
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

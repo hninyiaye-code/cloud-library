@@ -6,14 +6,14 @@ The project allows users to browse books, view members, manage borrowing informa
 This project is also being developed as a cloud engineering portfolio project and will later be deployed using AWS services.
 
 ## Features
--Responsive navigation
--Book catalog
--Book search
--Member management page
--Borrowing page
--Dashboard page
--Responsive design
--JavaScript interaction
+- Responsive navigation
+- Book catalog
+- Book search
+- Member management page
+- Borrowing page
+- Dashboard page
+- Responsive design
+- JavaScript interaction
 
 ## Technologies Used
 - HTML 5

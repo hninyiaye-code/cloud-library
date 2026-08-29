@@ -24,6 +24,12 @@ The application is deployed on AWS using Amazon S3 and Amazon CloudFront. The S3
 - Amazon S3
 - Amazon CloudFront
 
+## AWS Architecture Diagram
+
+The Cloud Library application uses Amazon CloudFront to securely deliver static website content stored in private Amazon S3 bucket.
+
+![Cloud Library AWS Architecture](architecture/cloud-library-aws-architecture.png)
+
 ## AWS Cloud Deployment
 
 The Cloud Library website is deployed on AWS as a static web application.
@@ -92,6 +98,10 @@ cloud_library/
     |-- 05-s3-block-public-access.png
     |-- 06-s3-cloudfront-bucket-policy.png
     |-- 07-cloudfront-distribution.png
+|
+|-- architecture/
+|   |-- cloud-library-aws-architecture.drawio
+    |-- cloud--library-aws-architecture.png
 |
 |-- index.html
 |-- books.html

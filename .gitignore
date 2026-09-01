@@ -1,7 +1,10 @@
+# gitignore protects the important files we don't want to push GitHub.
+
 # Terraform local files
-.terraform/
+# Downloaded Terraform provider files
+.terraform/     
 *.tfstate
-*.tfstate.*
+*.tfstate.*     
 .terraform.tfstate.lock.info
 
 # Terraform variable files may contain secrets

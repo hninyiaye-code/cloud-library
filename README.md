@@ -23,6 +23,8 @@ The application is deployed on AWS using Amazon S3 and Amazon CloudFront. The S3
 - GitHub
 - Amazon S3
 - Amazon CloudFront
+- Terraform
+- AWS CLI
 
 ## AWS Architecture Diagram
 
@@ -78,6 +80,73 @@ User --> Amazon CloudFront --> Private Amazon S3 Bucket --> Website Files
 - `borrow.html` - Borrowing page
 - `dashboard.html` - Library dashboard
 
+## Infrastructure as Code with Terraform
+
+Terraform is used in this project to provide and manage the AWS infrastructure for the Cloud Library application.
+
+### AWS Resources Managed by Terraform
+
+- Amazon S3 bucket for website files
+- S3 Block Public Access for bucket security
+- S3 Bucket Ownership Controls
+- S3 Versioning
+- Amazon CloudFront Origin Access Control (OAC)
+- Amazon CloudFront distribution
+- S3 bucket policy allowing secure access from CloudFront
+- Terraform output for the CloudFront domain name
+
+### Terraform Workflow
+
+The following Terraform commands were used to build and verify the infrastructure:
+
+```bash
+terraform init
+terraform fmt
+terraform validate
+terraform plan
+terraform apply
+```
+After deployment, `terraform plan` was run again to verify that the AWS infrastructure matched the Terraform configuration.
+
+## Secure Architecture
+
+The S3 bucket is not publicly accessible. CloudFront accesses the private S3 bucket through Origin Access Control (OAC). Users access the Cloud Library website through the CloudFront distribution.
+
+```text
+User / Browser
+    |
+    |
+Amazon CloudFront
+    |
+    | Origin Access Control (OAC)
+    |
+Private Amazon S3 Bucket
+    |
+    |
+HTML/CSS/JavaScript/Images
+```
+### Terraform Deployment
+
+**Terraform configuration**
+
+![Terraform main configuration](screenshots/terraform-main-code.png)
+
+**Terraform deployment**
+
+![Terraform apply successful](screenshots/terraform-apply-success.png)
+
+**Final Terraform verification**
+
+![Terraform plan - no changes](screenshots/terraform-plan-no-changes.png)
+
+**Application deployed through Terraform-managed CloudFront**
+
+![Cloud Library running through CloudFront](screenshots/terraform-cloudfront-live-website.png)
+
+### Terraform Files
+The Terraform configuration is located in the [`terraform`](terraform/) directory.
+Terraform state files, local provider files, variable files and plan files are excluded from GitHub using `.gitignore`.
+
 ## Project Structure
 ```text
 cloud_library/
@@ -98,11 +167,22 @@ cloud_library/
     |-- 05-s3-block-public-access.png
     |-- 06-s3-cloudfront-bucket-policy.png
     |-- 07-cloudfront-distribution.png
+    |-- s3-versioning-enabled.png
+    |-- terraform-apply-success.png
+    |-- terraform-cloudfront-apply.png
+    |-- terraform-cloudfront-live-website.png
+    |-- terraform-main-code.png
+    |-- terraform-plan-no-changes.png
+    |-- terraform-plan.png
 |
 |-- architecture/
 |   |-- cloud-library-aws-architecture.drawio
     |-- cloud--library-aws-architecture.png
 |
+|-- terraform/
+|   |-- main.tf
+    |-- .terraform.lock.hcl
+|    
 |-- index.html
 |-- books.html
 |-- members.html

@@ -82,7 +82,7 @@ User --> Amazon CloudFront --> Private Amazon S3 Bucket --> Website Files
 
 ## Infrastructure as Code with Terraform
 
-Terraform is used in this project to provide and manage the AWS infrastructure for the Cloud Library application.
+Terraform is used in this project to provision and manage the AWS infrastructure for the Cloud Library application.
 
 ### AWS Resources Managed by Terraform
 

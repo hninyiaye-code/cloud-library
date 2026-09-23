@@ -147,10 +147,21 @@ HTML/CSS/JavaScript/Images
 The Terraform configuration is located in the [`terraform`](terraform/) directory.
 Terraform state files, local provider files, variable files and plan files are excluded from GitHub using `.gitignore`.
 
+## CI/CD Pipeline
+This project uses GitHub Actions to automatically deploy website updates to Amazon S3 whenever changes to push to the `main` branch.
+GitHub Actions authenticates securely to AWS using OIDC and an IAM role, avoiding permanent AWS access keys.
+After deployment, the workflow automatically creates a CloudFront cache invalidation so the latest version of the website is served.
+
+Deployment flow:
+Developer --> GitHub --> GitHub Actions --> AWS IAM/OIDC --> Amazon S3 --> CloudFront Invalidation --> Users
 ## Project Structure
 ```text
 cloud_library/
 |
+|-- .github/
+|--  workflows/
+|   |--deploy.yml
+|    
 |-- css/
 |   |-- style.css
 |
@@ -189,5 +200,6 @@ cloud_library/
 |-- borrow.html
 |-- dashboard.html
 |-- README.md
+|-- .gitignore
 ```
 

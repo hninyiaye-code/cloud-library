@@ -154,6 +154,19 @@ After deployment, the workflow automatically creates a CloudFront cache invalida
 
 Deployment flow:
 Developer --> GitHub --> GitHub Actions --> AWS IAM/OIDC --> Amazon S3 --> CloudFront Invalidation --> Users
+
+## Monitoring
+Amazon CloudWatch is used to monitor the CloudFront distribution, including request traffic, cache performance and HTTP error rates.
+A CloudWatch alarm is configured to detect elevated 5xx errors so potential availability issues can be identified quickly.
+
+**CloudWatch Alarm Details**
+
+![CloudWatch Alarm Details](screenshots/CloudWatch-alarm.png)
+
+**CloudWatch Monitoring View**
+
+![CloudWatch Monitoring View](screenshots/CloudWatch-CloudFront-5xx-alarm.png)
+
 ## Project Structure
 ```text
 cloud_library/

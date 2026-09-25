@@ -28,7 +28,8 @@ The application is deployed on AWS using Amazon S3 and Amazon CloudFront. The S3
 
 ## AWS Architecture Diagram
 
-The Cloud Library application uses Amazon CloudFront to securely deliver static website content stored in private Amazon S3 bucket.
+The Cloud Library application is hosted on AWS using Amazon S3 and CloudFront. GitHub Actions provides automated CI/CD deployment using secure AWS IAM OIDC authentication, while Terraform provisions and manages the cloud infrastructure.
+Amazon CloudWatch monitors CloudFront 5xx errors and Amazon SNS provides alert notifications.
 
 ![Cloud Library AWS Architecture](architecture/cloud-library-aws-architecture.png)
 
